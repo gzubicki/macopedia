@@ -29,15 +29,22 @@ class ToPack(object):
                         if i >= 10:
                             warunek = 2
                         # print('round  {} '.format(round(i / pojemnosc) ))
-                        if i // pojemnosc >= warunek:
+                        if roundafter85(i / pojemnosc) >= warunek:
                             
-                            cardboards = i // pojemnosc
+                            cardboards = roundafter85(i // pojemnosc)
                             exec('self.{} +={}'.format(names[karton], cardboards))
                             i = i -(cardboards * karton[-1])
                             print('dodaje poj {} sztuk {}, teraz i = {}'.format(pojemnosc, cardboards, i))
         else:
             raise NameError('value is not in 1-100')
         return self
+
+from math import ceil, floor
+def roundafter85(x: int):
+    i = x - int(x)
+    if i > 0.85:
+        return ceil(x)
+    return floor(x)
 
 def main():
     x = ToPack()

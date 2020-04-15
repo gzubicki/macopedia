@@ -31,7 +31,7 @@ class TestPacking(unittest.TestCase):
         tab[10] ={'maly': 0, 'sredni': 2, 'duzy': 0, 'zbiorczy':0}
         tab[11] ={'maly': 0, 'sredni': 2, 'duzy': 0, 'zbiorczy':0}
         tab[12] ={'maly': 0, 'sredni': 2, 'duzy': 0, 'zbiorczy':0}
-        # tab[13] ={'maly': 0, 'sredni': 0, 'duzy': 2, 'zbiorczy':0}
+        tab[13] ={'maly': 0, 'sredni': 0, 'duzy': 2, 'zbiorczy':0}
         tab[14] ={'maly': 0, 'sredni': 0, 'duzy': 2, 'zbiorczy':0}
         tab[15] ={'maly': 0, 'sredni': 0, 'duzy': 2, 'zbiorczy':0}
         tab[16] ={'maly': 0, 'sredni': 0, 'duzy': 2, 'zbiorczy':0}
@@ -63,6 +63,6 @@ class TestPacking(unittest.TestCase):
             # self.assertEqual(x.duzy, i.duzy)
 
 
-
 if __name__ == '__main__':
     unittest.main()
+
